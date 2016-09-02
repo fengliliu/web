@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>li/ul/li结构二级导航</title>
+<!--<mce:script src="ee.js" mce_src="ee.js" language="javascript" type="text/javascript"></mce:script>-->
+</head>
+
+<mce:style type="text/css"><!--
+ul,li{
+    list-style: outside none;
+    padding:0;
+    margin:0;
+}
+body{
+    line-height:20px;
+}
+#nav a{
+    display:block;
+    text-decoration:none;
+
+}
+#nav li{
+    background:#999;
+    float:left;
+}
+#nav a,#nav ul,#nav li{
+    width:80px;
+}
+#nav li ul{
+    float:left;
+    position:absolute;
+    left:-10000px;
+}
+#nav a:hover{
+    background:#03F;
+}
+#nav li ul li{
+    background:#FFF;
+}
+
+#nav li.reset ul{
+    left:auto;
+}
+--></mce:style><style type="text/css" mce_bogus="1">ul,li{
+    list-style: outside none;
+    padding:0;
+    margin:0;
+}
+body{
+    line-height:20px;
+}
+#nav a{
+    display:block;
+    text-decoration:none;
+
+}
+#nav li{
+    background:#999;
+    float:left;
+}
+#nav a,#nav ul,#nav li{
+    width:80px;
+}
+#nav li ul{
+    float:left;
+    position:absolute;
+    left:-10000px;
+}
+#nav a:hover{
+    background:#03F;
+}
+#nav li ul li{
+    background:#FFF;
+}
+
+#nav li.reset ul{
+    left:auto;
+}</style>
+<body>
+<div id="nav">
+<li><a href="#" mce_href="#">首页</a>
+    <ul id="hared">
+        <li><a href="#" mce_href="#">次页1</a></li>
+        <li><a href="#" mce_href="#">次页2</a></li>
+        <li><a href="#" mce_href="#">次页3</a></li>
+        <li><a href="#" mce_href="#">次页4</a></li>
+        <li><a href="#" mce_href="#">次页5</a></li>
+        <li><a href="#" mce_href="#">次页6</a></li>
+        <li><a href="#" mce_href="#">次页7</a></li>
+    </ul>
+</li>
+<li><a href="#" mce_href="#">首页</a>
+    <ul id="hared">
+        <li><a href="#" mce_href="#">次页1</a></li>
+        <li><a href="#" mce_href="#">次页2</a></li>
+        <li><a href="#" mce_href="#">次页3</a></li>
+        <li><a href="#" mce_href="#">次页4</a></li>
+        <li><a href="#" mce_href="#">次页5</a></li>
+        <li><a href="#" mce_href="#">次页6</a></li>
+        <li><a href="#" mce_href="#">次页7</a></li>
+    </ul>
+</li>
+</div>
+<div style="clear:both" mce_style="clear:both"></div>
+<div style="background:#666; width:300px; height:300px;">
+</div>
+
+
+</body>
+<script language="javascript" type="text/javascript">
+window.onload=function(){
+var navlist = document.getElementById("nav").getElementsByTagName("li");
+
+for (var i=0; i<navlist.length; i++)
+{
+    navlist[i].onmouseover = function(){
+
+        this.className += "reset";
+    }
+
+    navlist[i].onmouseout = function(){
+        this.className=this.className.replace(new RegExp("( ?|^)reset//b"),"");
+    }
+}
+}
+</script>
+</html>
